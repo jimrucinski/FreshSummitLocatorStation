@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+             <script src="js/jquery-1.11.2.js" type="text/javascript"></script>
+			 <script src="js/KioWare.js" type="text/javascript"></script>
+             <script type="text/javascript">
+              $(document).ready(function(){
+        $("#loader").dialog({modal: true});
+    });
+            </script>
+
+        <style>
+            body{margin:0; padding:2;min-height: 100px;width:100%;overflow:hidden}
+            #menu{width:100%;position:absolute;top:800px;}
+            .menuItem{ width:16%;float:left;padding:3 5 5 3;text-align:center;text-transform: capitalize;color:#5c4631;font-size:.9em;font-family: verdana;font-weight: bolder;}
+            a{color:#5c4631;text-decoration:none;white-space:nowrap;}
+            #DownloadMsg{background-color:#b4d435;position:absolute;top:976px;width:100%;font-family: verdana;font-size:1.25em;font-weight:bolder;text-transform: capitalize;color:#ffffff;text-align: center}
+            #loader{width:100%;height:100%;background-color:#eeeeee;z-index:1;display:hidden;}
+        </style>
+        <title>Locator Station</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        
+        <div id="loader" style="display:none;">loading</div>
+        <div id="menu">
+            <div class="menuItem" style="padding:.5em 0 0 .5em"><a href="LocatorStations.html"><img src="img/PMA-IconHP_sm.png" alt="PMA" width="217" height="130"/></a></div>
+            <br/>
+            <div class="menuItem"><a target="links" href="http://s15.a2zinc.net/clients/PMA_freshsummit/15/Public/Exhibitors.aspx?ID=178&sortMenu=105000#"><img height="100" width="100" src="img/Exhibitors_sm.png" alt=""/><br/>exhibitors<a/></div>
+                <div class="menuItem"><a target="links" href="http://s15.a2zinc.net/clients/PMA_freshsummit/15/Public/ProductSearch.aspx?Task=Search&Category=0&Keyword=&SubCategory=0&ProductTypeIDs=&ID=183&sortMenu=107000"><img height="100" width="100" src="img/Products-Icon_sm.png" alt=""/><br/>fresh ideas showcase</a></div>
+                <div class="menuItem"><a target="links" href="http://sites.pma.com/kioskfreshsummitreglist/listing.aspx?kid=akls7p6ahsp98ayupn9a8dp"><img height="100" width="100" src="img/AttendeeList-Icon_sm.png" alt=""/><br/>attendee list</a></div>
+                <div class="menuItem"><a target="links" href="http://s15.a2zinc.net/clients/PMA_Freshsummit/15/Public/EventMap.aspx?shMode=E"><img height="100" width="100" src="img/FloorPlan-Icon_sm.png" alt=""/><br/>floorplan</a></div>
+                <div class="menuItem"><a target="links" href="http://www.pma.com/events/freshsummit/program/schedule-at-a-glance"><img height="100" width="100" src="img/Schedule-Icon_sm.png" alt=""/><br/>schedule</a></div>
+        </div>
+        <div id="DownloadMsg">*** Download the 2015 Fresh Summit Mobile App to have this information on the go! ***</div>
+            <iframe name="links" id="links" style="position:absolute;left:0px;top:0px;" width="1920 " height="800" src=""></iframe>
+
+        <!--<iframe id="links" src="http://s15.a2zinc.net/clients/PMA_freshsummit/15/Public/ProductSearch.aspx?Task=Search&Category=0&Keyword=&SubCategory=0&ProductTypeIDs=&ID=183&sortMenu=107000"></iframe>-->
+   
+            <script language="javascript">
+
+var curUrl="";
+var pageId="";
+ function changeSrc(nme,href){
+				window.external.WriteLogEntry(nme, href);   
+                document.getElementById("links").setAttribute('src',href);
+            }
+                function getParam ( sname )
+                {
+
+                    document.getElementById("loader").style.display='block';
+                  var params = location.search.substr(location.search.indexOf("?")+1);
+                  var sval = "";
+                  params = params.split("&");
+                    // split param and value into individual pieces
+                    for (var i=0; i<params.length; i++)
+                       {
+                         temp = params[i].split("=");
+                         if ( [temp[0]] == sname ) { sval = temp[1]; }
+                       }
+                       document.getElementById("loader").style.display='none';
+					   pageId=sval;
+                  return sval;
+                }
+                switch(getParam("pid")){
+                    case "Exhibitors":
+                        curUrl="http://s15.a2zinc.net/clients/PMA_freshsummit/15/Public/Exhibitors.aspx?ID=178&sortMenu=105000#";    
+                        break;
+                    case "FreshIdeas":
+                        curUrl="http://s15.a2zinc.net/clients/PMA_freshsummit/15/Public/ProductSearch.aspx?Task=Search&Category=0&Keyword=&SubCategory=0&ProductTypeIDs=&ID=183&sortMenu=107000"
+                        break;
+                    case "AttendeeList":
+                        curUrl="http://sites.pma.com/kioskfreshsummitreglist/listing.aspx?kid=akls7p6ahsp98ayupn9a8dp";
+                        break;
+                    case "Floorplan":
+                        curUrl="http://s15.a2zinc.net/clients/PMA_Freshsummit/15/Public/EventMap.aspx?shMode=E";
+                        break;
+                    case "Schedule":
+                        curUrl="http://www.pma.com/events/freshsummit/program/schedule-at-a-glance"
+                        break;
+                    default:
+                        break;
+                }
+			//document.getElementById("links").src=curUrl;
+            changeSrc(pageId,curUrl);
+			//window.external.WriteLogEntry(pageId, curUrl);
+            
+            //document.getElementById("link").src="http://s15.a2zinc.net/clients/PMA_freshsummit/15/Public/ProductSearch.aspx?Task=Search&Category=0&Keyword=&SubCategory=0&ProductTypeIDs=&ID=183&sortMenu=107000";
+
+            </script>
+    </body>
+</html>
