@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        
+        <style>
+            html{background-image:url('img/PMA_FreshSummit_Splash_Blank.png');
+            background-repeat: no-repeat;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;   
+            background-size:cover;
+            min-height:100%;
+            overflow:hidden;
+            }
+            #logo{padding:1em 0 0 1em;}
+            #logo img{width:20%;}
+            #menu{text-align: center;display:inline-block;width:100%;margin-left:auto;margin-right:auto; position:absolute;top:35%;}
+            .menuItem{ width:18%;display:inline-block;text-align:center;font-size:1em;white-space:nowrap;text-transform: capitalize;color:#5c4631;font-family: verdana;font-weight: bolder;}
+            .menuItem img{width:100%;max-width:200px;}
+            #sponsors{text-align: right;display:inline-block;width:100%;position:absolute;bottom:0em;}
+            .sponsorItem{display:inline-block;height:100%;margin-right:2em;}
+            .sponsorItem img{max-height:60px;padding:10px;}
+            @media (min-width:650px) and (max-width:1200px)  {
+            .menuItem{font-size:.85em;white-space:pre-wrap}
+            .sponsorItem img{max-height:50px;}
+            }
+            @media (min-width:320px) and (max-width:650px)  {
+            .menuItem{font-size:.65em;white-space: pre-wrap}
+            .sponsorItem img{max-height:20px;}
+            
+            }
+
+        </style>
+        
+        <title>Fresh Summit Locator Station</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div id="main">
+             <div id="logo">
+                <img src="img/PMA-IconHP_sm.png" alt="PMA"/>
+            </div>
+            <div id="menu">
+                <div class="menuItem"><a href="LocatorStationPageDisplayjs.html?pid=Exhibitors"><img src="img/Exhibitors.png" alt=""/><br/>exhibitors</a></div>
+                <div class="menuItem"><a href="LocatorStationPageDisplayjs.html?pid=FreshIdeas"><img src="img/Products-Icon.png" alt=""/><br/>fresh ideas showcase</a></div>
+                <div class="menuItem"><a href="LocatorStationPageDisplayjs.html?pid=AttendeeList"><img src="img/AttendeeList-Icon.png" alt=""/><br/>attendee list</a></div>
+                <div class="menuItem"><a href="LocatorStationPageDisplayjs.html?pid=Floorplan"><img src="img/FloorPlan-Icon.png" alt=""/><br/>floorplan</a></div>
+                <div class="menuItem"><a href="LocatorStationPageDisplayjs.html?pid=Schedule"><img src="img/Schedule-Icon.png" alt=""/><br/>schedule</a></div>
+            </div>
+            <div id="sponsors">
+                <div class="sponsorItem"><img src="img/BlueBookServicesHiRes.png" alt=""/></div>
+                <div class="sponsorItem"><img src="img/StagnitoMedia.png" alt=""/></div>
+                <div class="sponsorItem"><img src="img/WordmarkAndHalfGiant.png" alt=""/></div>            
+            </div>
+        </div>
+    </body>
+</html>
