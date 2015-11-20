@@ -1,0 +1,72 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov 20, 2015, 2:03:29 PM
+    Author     : jxr
+*/
+
+html{background-image:url('../img/PMA_FreshSummit_Splash_Blank.png');
+background-repeat: no-repeat;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;   
+background-size:cover;
+min-height:100%;
+overflow:hidden;
+}
+#logo{padding:1em 0 0 1em;}
+#logo img{width:20%;}
+#menu{display:inline-block;width:100%;margin-left:auto;margin-right:auto; position:absolute;top:35%;}
+.menuItem{width:18%;display:inline-block;text-align:center;font-size:1em;white-space:nowrap;text-transform: capitalize;color:#5c4631;font-family: verdana;font-weight: bolder;}
+.menuItem img{width:100%;max-width:200px;text-align:center;margin-left:auto;margin-right:auto;}
+#sponsors{text-align: right;display:inline-block;width:100%;position:absolute;bottom:0em;}
+.sponsorItem{display:inline-block;height:100%;margin-right:2em;}
+.sponsorItem img{max-height:60px;padding:10px;}
+
+@media (min-width:740px) and (max-width:768px)  {
+html{background-image:url('../img/PMA_FreshSummit_Splash_Blank_vert1024.png');
+background-repeat: no-repeat;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;   
+background-size:cover;
+min-height:100%;
+overflow:hidden;
+}
+#logo{padding:0;text-align:right;}
+#logo img{width:25%;}
+#menu{display:block;position: absolute;top:110px;}
+.menuItem{position:relative;display:block;vertical-align:middle;margin-bottom: 1em;height:110px;line-height: 110px;width:100%;text-align: left;}
+.menuItem img{max-height:110px;max-width:110px;vertical-align: bottom;margin-right:.75em;}
+.menuItem div{position:relative;display:inline-block;vertical-align: middle;font-weight:bolder;font-size:larger;}
+#sponsors{text-align: left;display:block;width:100%;position:absoulte;bottom:150px;}
+.sponsorItem{float:left;}
+.sponsorItem img{max-height:50px;padding:10px;}
+}
+@media (min-width:480px) and (max-width:699px)  {
+.menuItem{font-size:.65em;white-space: pre-wrap}
+.sponsorItem img{max-height:20px;}            
+}
+@media (min-width:200px) and (max-width:479px){
+html{background-image:url('../img/PMA_FreshSummit_Splash_Blank_Vert.png');
+background-repeat: no-repeat;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;   
+background-size:cover;
+min-height:100%;
+overflow:hidden;
+}
+#logo{padding:0;}
+#logo img{width:40%;}
+#menu{display:block;position: relative;top:0;}
+.menuItem{position:relative;display:block;vertical-align:middle;margin-bottom: 1em;height:30px;line-height: 30px;}
+.menuItem img{max-height:30px;max-width:30px;vertical-align: bottom;margin-right:.75em;}
+.menuItem div{position:relative;display:inline-block;vertical-align: middle;font-weight:lighter;}
+#sponsors{text-align: left;display:block;width:100%;position:relative;margin-top:40px;}
+.sponsorItem{float:left;}
+.sponsorItem img{max-height:40px;padding:10px;}
+}
